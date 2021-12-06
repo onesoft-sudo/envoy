@@ -1,0 +1,18 @@
+{
+    "name": "osn/envoy",
+    "description": "A simple environment configuration loader.",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "OSN\\Envoy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ar Rakin",
+            "email": "rakinar2@gmail.com"
+        }
+    ],
+    "require": {}
+}
