@@ -25,14 +25,18 @@ class ParseENV
      *
      * @param string $line
      * @throws Exception
-     * @return array
+     * @return array|bool
      */
-    public function parseLine(string $line): array
+    public function parseLine(string $line)
     {
         $exp = explode("=", $line);
 
+        if(count($exp) == 1 && trim($exp[0]) === ''){
+            return false;
+        }
+
         if (count($exp) < 2){
-            throw new Exception("Parse error: Syntax error: No '=' found on line {$this->line}. File: \"{$this->filename}\"", 1);
+            throw new Exception("Parse error: Syntax error: Expecting '=' on line {$this->line}. File: \"{$this->filename}\"", 1);
         }
 
         $var = strtoupper(trim($exp[0]));
@@ -64,6 +68,12 @@ class ParseENV
         foreach ($lines as $line) {
             $this->line++;
             $parsedLine = $this->parseLine($line);
+
+
+            if ($parsedLine === false) {
+                continue;
+            }
+
             $parsed[$parsedLine["var"]] = $parsedLine["value"];
         }
 
