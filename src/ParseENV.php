@@ -35,6 +35,18 @@ class ParseENV
             return false;
         }
 
+        $comment = trim(str_replace("<br />", "", nl2br($line)));
+        $hashPosition = strpos($line, '#');
+
+        if ($comment[0] == '#') {
+            return false;
+        }
+
+        if($hashPosition !== false) {
+            $line = substr($line, 0, $hashPosition);
+            $exp = explode("=", $line);
+        }
+
         if (count($exp) < 2){
             throw new Exception("Parse error: Syntax error: Expecting '=' on line {$this->line}. File: \"{$this->filename}\"", 1);
         }
