@@ -1,7 +1,7 @@
 .vscode/
 .idea/
 vendor/
-.env
+./.env
 composer.lock
 test.php
 .phpunit.result.cache
