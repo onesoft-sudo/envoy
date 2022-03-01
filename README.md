@@ -26,6 +26,8 @@ Both of these are optional but note that argument 1 defaults to `./.env`.
 
 Then you need to call the `load()` method on the instance to load all the configuration from the env file to super global `$_ENV`.
 
+If there was an error while parsing the file, Envoy will throw `OSN\Envoy\EntityParseErrorException`.
+
 ```php
 <?php
   require __DIR__ . "/vendor/autoload.php";
@@ -38,7 +40,7 @@ Then you need to call the `load()` method on the instance to load all the config
     $envoy->load();
     print_r($_ENV);
   }
-  catch(OSN\Envoy\EntityParseErrorException $e){
+  catch(\OSN\Envoy\EntityParseErrorException $e){
     echo "Error while parsing the file: " . $e->getMessage();
   }
 ```
