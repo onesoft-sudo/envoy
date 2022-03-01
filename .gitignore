@@ -1,4 +1,7 @@
-test.php
-vendor/
+.vscode/
 .idea/
+vendor/
 .env
+composer.lock
+test.php
+.phpunit.result.cache

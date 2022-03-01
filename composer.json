@@ -8,12 +8,22 @@
             "OSN\\Envoy\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "OSN\\Envoy\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Ar Rakin",
             "email": "rakinar2@gmail.com"
         }
     ],
-
-    "require": {}
+    "scripts": {
+        "test": "./vendor/bin/phpunit --colors=always"
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }

@@ -26,25 +26,25 @@ Let's see how to invoke envoy.
 <?php
   require __DIR__ . "/vendor/autoload.php";
   
-  use OSN\Envoy\ParseENV;
+  use OSN\Envoy\Envoy;
   
-  $parser = new ParseENV();
+  $envoy = new Envoy();
   
   try {
-    $env = $parser->parseFile(".env"); // path to you env file...
-    print_r($env);
+    $envoy->load();
+    print_r($_ENV);
   }
-  catch(OSN\Envoy\Exception $e){
+  catch(OSN\Envoy\EntityParseErrorException $e){
     echo "Error while parsing the file: " . $e->getMessage();
   }
 ```
 
-If our `.env` file is this:
+If the `.env` file is this:
 
 ```
-DSN = mysql:host=localhost;port=3306;dbname=mydatabase
-DB_USER = root
-DB_PASSWORD = 
+DSN=mysql:host=localhost;port=3306;dbname=mydatabase
+DB_USER=root
+DB_PASSWORD= 
 ```
 
 Then the above code should print:
