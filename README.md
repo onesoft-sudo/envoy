@@ -19,8 +19,12 @@ Once you've installed envoy, you can include the composer-generated autoloader i
 ```
 
 Okay, now you're ready to go!
-Let's see how to invoke envoy.
+Let's see how to invoke envoy. 
 
+You need to create an `OSN\Envoy\Envoy` object first. The `Envoy` constructor accepts parameter 1 as the env file path, and the second argument is the configuration array.
+Both of these are optional but note that argument 1 defaults to `./.env`.
+
+Then you need to call the `load()` method on the instance to load all the configuration from the env file to super global `$_ENV`.
 
 ```php
 <?php
