@@ -63,5 +63,21 @@ Array (
 )
 ```
 
+## Configuration
+When you create the `Envoy` object, you can pass the config array as second parameter to the constructor. The array follows the follwing structure:
+
+```php
+[
+    \OSN\Envoy\Envoy::CONFIG_OPTION_HERE => "value",
+    \OSN\Envoy\Envoy::CONFIG_OPTION_2 => true,
+]
+```
+
+### Available Configuration Options
+
+Option                     |Values|Description
+---------------------------|------|-------------------------------------------------------------------------------------------
+CONFIG_ASSIGN_ENV_TO_SERVER|`bool`|Specify that envoy should also set th environment variables to the super global `$_SERVER`.
+
 ## Support
 Please contact us at [bug-envoy@onesoftnet.ml](mailto:bug-envoy@onesoftnet.ml).
