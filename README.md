@@ -1,4 +1,7 @@
 # Envoy
+[![PHP Composer](https://github.com/onesoft-sudo/envoy/actions/workflows/php.yml/badge.svg)](https://github.com/onesoft-sudo/envoy/actions/workflows/php.yml)
+![Packagist Downloads](https://img.shields.io/packagist/dt/osn/envoy?label=Downloads)
+
 A simple environment configuration loader.
  
 ## Installation
@@ -80,4 +83,4 @@ Option                       |Values|Description
 `CONFIG_ASSIGN_ENV_TO_SERVER`|`bool`|Specify that envoy should also push the environment variables to the super global `$_SERVER`.
 
 ## Support
-Please contact us at [bug-envoy@onesoftnet.ml](mailto:bug-envoy@onesoftnet.ml).
+Please contact us at [envoy@onesoftnet.ml](mailto:envoy@onesoftnet.ml).
