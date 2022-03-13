@@ -1,5 +1,8 @@
 # ChangeLog
 
+### v2.0.3 (2022-03-13)
++ Added support for comments
+
 ### v2.0.0 (2022-03-01)
 + Major updates
 + Removed `OSN\Envoy\ParseENV` class

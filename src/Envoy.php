@@ -65,7 +65,8 @@ class Envoy
         $entities = [];
 
         foreach ($lines as $line) {
-            if (trim($line) === '') {
+            $trimmed = trim($line);
+            if ($trimmed === '' || $trimmed[0] === '#') {
                 Entity::$line++;
                 continue;
             }

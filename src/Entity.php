@@ -94,7 +94,7 @@ class Entity
         }
 
         $field = substr($this->raw, 0, $equalPos);
-        $value = substr($this->raw, $equalPos + 1);
+        $value = preg_replace("/#([^'\"]*)$/", "", substr($this->raw, $equalPos + 1));
 
         if ($value === '' || trim($value) === '') {
             $value = null;
