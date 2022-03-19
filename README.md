@@ -1,5 +1,6 @@
 # Envoy
 [![PHP Composer](https://github.com/onesoft-sudo/envoy/actions/workflows/php.yml/badge.svg)](https://github.com/onesoft-sudo/envoy/actions/workflows/php.yml)
+![Packagist Version](https://img.shields.io/packagist/v/osn/envoy?label=Packagist)
 ![](https://img.shields.io/packagist/dt/osn/envoy?label=Downloads)
 
 A simple environment configuration loader.
