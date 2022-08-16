@@ -84,4 +84,4 @@ Option                       |Values|Description
 `CONFIG_ASSIGN_ENV_TO_SERVER`|`bool`|Specify that envoy should also push the environment variables to the super global `$_SERVER`.
 
 ## Support
-Please contact us at [envoy@onesoftnet.ml](mailto:envoy@onesoftnet.ml).
+Please contact us at [envoy@onesoftnet.eu.org](mailto:envoy@onesoftnet.eu.org).
